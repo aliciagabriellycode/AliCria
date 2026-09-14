@@ -6,9 +6,8 @@ export const brand = {
   name: 'AliCria',
   tagline: 'Web • Design • Digital',
   whatsapp: {
-    // TODO(AliCria): substituir pelo número real em formato internacional
-    number: '5511999999999',
-    label: '(11) 99999-9999',
+    number: '5511927395328',
+    label: '(11) 92739-5328',
   },
   email: 'contato@alicria.com.br', // TODO(AliCria): confirmar e-mail definitivo
   instagram: '@alicria', // TODO(AliCria): confirmar usuário definitivo
@@ -21,14 +20,16 @@ export const nav = {
     { label: 'Diferencial', href: '#diferencial' },
     { label: 'Planos', href: '#planos' },
   ],
-  cta: { label: 'Falar com a gente', href: '#contato' },
+  // O href é montado em Navbar.jsx (link direto para o WhatsApp).
+  cta: { label: 'Falar com a gente' },
 }
 
 export const hero = {
   headlineLines: ['Seu negócio já faz um bom trabalho.', 'A internet só precisa mostrar isso.'],
   subheadline:
     'A gente cria páginas profissionais para pequenos negócios — pensadas para explicar rápido o que você oferece, passar confiança e facilitar o contato.',
-  ctaPrimary: { label: 'Quero apresentar melhor meu negócio', href: '#contato' },
+  // O href do CTA primário é montado em Hero.jsx (link direto para o WhatsApp).
+  ctaPrimary: { label: 'Quero apresentar melhor meu negócio' },
   ctaSecondary: { label: 'Ver projetos', href: '#projetos' },
 }
 

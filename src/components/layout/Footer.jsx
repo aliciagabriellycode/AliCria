@@ -1,5 +1,7 @@
 import { MessageCircle, Mail } from 'lucide-react'
 import { footer, brand } from '../../data/site'
+import { whatsappLink } from '../../lib/whatsapp'
+import alicriaIcon from '../../assets/brand/alicria-icon.png'
 
 // lucide-react não inclui ícones de marca (Instagram); um traço simples
 // mantém a mesma linguagem visual dos demais ícones (stroke, sem preenchimento).
@@ -14,12 +16,11 @@ function InstagramIcon(props) {
 }
 
 export default function Footer() {
-  const message = encodeURIComponent('Olá! Quero saber mais sobre a landing page da AliCria.')
-  const whatsappHref = `https://wa.me/${brand.whatsapp.number}?text=${message}`
+  const whatsappHref = whatsappLink('Olá! Quero saber mais sobre a AliCria.')
 
   const socials = [
-    // TODO(AliCria): substituir os placeholders pelos links reais das redes
-    { icon: InstagramIcon, label: 'Instagram', href: 'https://instagram.com/alicria' },
+    // TODO(AliCria): confirmar o usuário real do Instagram antes de publicar
+    { icon: InstagramIcon, label: 'Instagram', href: `https://instagram.com/${brand.instagram.replace('@', '')}` },
     { icon: MessageCircle, label: 'WhatsApp', href: whatsappHref },
     { icon: Mail, label: 'E-mail', href: `mailto:${brand.email}` },
   ]
@@ -28,9 +29,12 @@ export default function Footer() {
     <footer className="border-t border-line bg-white py-14">
       <div className="container-page">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <p className="text-lg font-extrabold text-ink">{brand.name}</p>
-            <p className="mt-1.5 text-sm text-ink-muted">{footer.tagline}</p>
+          <div className="flex items-center gap-3">
+            <img src={alicriaIcon} alt="" className="h-9 w-9" aria-hidden="true" />
+            <div>
+              <p className="text-lg font-extrabold text-ink">{brand.name}</p>
+              <p className="mt-0.5 text-sm text-ink-muted">{footer.tagline}</p>
+            </div>
           </div>
 
           <nav aria-label="Links do rodapé">
@@ -65,12 +69,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between">
+        {/* TODO(AliCria): Instagram e e-mail seguem com dados provisórios até a confirmação oficial. */}
+        <div className="mt-10 border-t border-line pt-6 text-xs text-ink-muted">
           <p>{footer.legal}</p>
-          <p>
-            {/* TODO(AliCria): links de redes sociais e e-mail ainda são placeholders */}
-            Links de contato temporários — a atualizar.
-          </p>
         </div>
       </div>
     </footer>

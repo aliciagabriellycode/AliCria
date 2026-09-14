@@ -1,10 +1,10 @@
-import { plans, brand } from '../../data/site'
+import { plans } from '../../data/site'
+import { whatsappLink } from '../../lib/whatsapp'
 import Button from '../ui/Button'
 import Reveal from '../ui/Reveal'
 
 function waLink(planName) {
-  const message = encodeURIComponent(`Olá! Tenho interesse no plano ${planName} da AliCria.`)
-  return `https://wa.me/${brand.whatsapp.number}?text=${message}`
+  return whatsappLink(`Olá! Tenho interesse no plano ${planName} da AliCria. Gostaria de saber mais e pedir um orçamento.`)
 }
 
 export default function Plans() {
