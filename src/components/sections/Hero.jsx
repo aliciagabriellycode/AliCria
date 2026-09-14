@@ -1,9 +1,14 @@
 import { hero } from '../../data/site'
+import { whatsappLink } from '../../lib/whatsapp'
 import Button from '../ui/Button'
 import Reveal from '../ui/Reveal'
 import BusinessPagePreview from '../previews/BusinessPagePreview'
 
 export default function Hero() {
+  const ctaPrimaryHref = whatsappLink(
+    'Olá! Tenho interesse em conhecer a AliCria e quero apresentar melhor o meu negócio.'
+  )
+
   return (
     <section id="top" className="relative overflow-hidden pt-14 pb-20 sm:pt-20 sm:pb-24 lg:pt-24">
       <div className="container-page grid grid-cols-1 items-center gap-16 lg:grid-cols-[1fr_0.92fr] lg:gap-10">
@@ -21,7 +26,7 @@ export default function Hero() {
 
           <Reveal delay={160}>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href={hero.ctaPrimary.href} variant="primary">
+              <Button href={ctaPrimaryHref} target="_blank" rel="noopener noreferrer" variant="primary">
                 {hero.ctaPrimary.label}
               </Button>
               <Button href={hero.ctaSecondary.href} variant="secondary">

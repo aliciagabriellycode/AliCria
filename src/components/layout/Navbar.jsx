@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react'
 import { nav, brand } from '../../data/site'
+import { whatsappLink } from '../../lib/whatsapp'
 import Button from '../ui/Button'
+import alicriaWordmark from '../../assets/brand/alicria-wordmark.png'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  const ctaHref = whatsappLink('Olá! Tenho interesse em conhecer a AliCria e quero apresentar melhor o meu negócio.')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -27,8 +31,8 @@ export default function Navbar() {
         className="container-page flex h-[72px] items-center justify-between"
         aria-label="Navegação principal"
       >
-        <a href="#top" className="text-lg font-extrabold tracking-tight text-ink">
-          {brand.name}
+        <a href="#top" className="shrink-0" aria-label={brand.name}>
+          <img src={alicriaWordmark} alt={brand.name} className="h-7 w-auto sm:h-8" />
         </a>
 
         <ul className="hidden items-center gap-9 md:flex">
@@ -45,7 +49,9 @@ export default function Navbar() {
         </ul>
 
         <Button
-          href={nav.cta.href}
+          href={ctaHref}
+          target="_blank"
+          rel="noopener noreferrer"
           variant="primary"
           className="hidden md:inline-flex px-5 py-2.5 text-sm"
         >
@@ -99,7 +105,14 @@ export default function Navbar() {
             </li>
           ))}
           <li className="pt-2">
-            <Button href={nav.cta.href} onClick={closeMenu} variant="primary" className="w-full">
+            <Button
+              href={ctaHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              variant="primary"
+              className="w-full"
+            >
               {nav.cta.label}
             </Button>
           </li>

@@ -1,10 +1,10 @@
-import { finalCta, brand } from '../../data/site'
+import { finalCta } from '../../data/site'
+import { whatsappLink } from '../../lib/whatsapp'
 import Button from '../ui/Button'
 import Reveal from '../ui/Reveal'
 
 export default function FinalCta() {
-  const message = encodeURIComponent('Olá! Quero saber mais sobre a landing page da AliCria.')
-  const whatsappHref = `https://wa.me/${brand.whatsapp.number}?text=${message}`
+  const whatsappHref = whatsappLink('Olá! Tenho interesse em criar uma página para o meu negócio.')
 
   return (
     <section id="contato" className="py-20 sm:py-28">
