@@ -7,7 +7,7 @@ import Projects from './components/sections/Projects'
 import Process from './components/sections/Process'
 import Differential from './components/sections/Differential'
 import Benefits from './components/sections/Benefits'
-import Plans from './components/sections/Plans'
+import CustomProjects from './components/sections/CustomProjects'
 import FinalCta from './components/sections/FinalCta'
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
         <Process />
         <Differential />
         <Benefits />
-        <Plans />
+        <CustomProjects />
         <FinalCta />
       </main>
 
