@@ -18,7 +18,7 @@ export const nav = {
     { label: 'Projetos', href: '#projetos' },
     { label: 'Como funciona', href: '#processo' },
     { label: 'Diferencial', href: '#diferencial' },
-    { label: 'Planos', href: '#planos' },
+    { label: 'Orçamento', href: '#orcamento' },
   ],
   // O href é montado em Navbar.jsx (link direto para o WhatsApp).
   cta: { label: 'Falar com a gente' },
@@ -127,75 +127,25 @@ export const finalCta = {
   cta: { label: 'Vamos conversar' },
 }
 
-export const plans = {
-  headline: 'Escolha a presença que faz sentido para o seu negócio.',
-  subheadline:
-    'Do primeiro passo à presença digital completa, a AliCria cuida da apresentação do seu negócio.',
-  items: [
-    {
-      id: 'essencial',
-      name: 'Essencial',
-      price: 'R$ 697',
-      priceNote: null,
-      audience: 'Para quem está começando a apresentar o negócio na internet.',
-      text: 'Você ainda não tem uma página profissional e quer um lugar organizado para apresentar sua empresa, seus serviços e facilitar o contato com novos clientes.',
-      includesFrom: null,
-      features: [
-        'Página profissional personalizada',
-        'Apresentação da empresa',
-        'Produtos ou serviços',
-        'Galeria de imagens',
-        'Botões de contato',
-        'Versão para celular',
-        'Publicação da página',
-        'Até 2 rodadas de ajustes',
-      ],
-      cta: 'Quero começar',
-      highlight: null,
-    },
-    {
-      id: 'presenca',
-      name: 'Presença',
-      price: 'R$ 897',
-      priceNote: 'R$ 59/mês após a publicação',
-      audience: 'Para quem já divulga o negócio, mas quer uma presença online mais organizada e profissional.',
-      text: 'Seus clientes encontram você no Instagram ou WhatsApp, mas as informações ficam espalhadas? A gente organiza tudo em uma página pensada para apresentar melhor o seu negócio.',
-      includesFrom: 'Essencial',
-      features: [
-        'Estrutura mais completa',
-        'Organização estratégica do conteúdo',
-        'Galeria de projetos ou produtos',
-        'Configuração do domínio',
-        'Manutenção da página',
-        'Pequenas atualizações',
-      ],
-      cta: 'Quero melhorar minha presença',
-      highlight: 'Mais escolhido',
-    },
-    {
-      id: 'completa',
-      name: 'Completa',
-      price: 'R$ 1.297',
-      priceNote: 'R$ 99/mês após a publicação',
-      audience: 'Para quem quer ter uma presença profissional sem precisar se preocupar com a parte técnica.',
-      text: 'Você cuida do seu negócio. A AliCria cuida da parte digital.',
-      includesFrom: 'Presença',
-      features: [
-        'Domínio personalizado',
-        'Hospedagem',
-        'Configuração técnica',
-        'Manutenção contínua',
-        'Pequenas atualizações',
-        'Suporte relacionado à página',
-      ],
-      cta: 'Quero deixar tudo com a AliCria',
-      highlight: 'Mais completo',
-    },
+export const customProjects = {
+  headline: 'Seu projeto, do seu jeito.',
+  text: 'Cada negócio tem necessidades diferentes. Por isso, criamos projetos personalizados, estruturados de acordo com os objetivos, necessidades e momento de cada cliente.',
+  complement:
+    'Do planejamento à publicação, cuidamos da estrutura necessária para criar uma presença digital profissional, estratégica e alinhada à sua marca.',
+  examplesLabel: 'O que pode fazer parte do seu projeto',
+  examplesNote: 'Cada projeto é montado sob medida — a combinação de itens varia de negócio para negócio.',
+  examples: [
+    'Landing pages',
+    'Sites institucionais',
+    'Portfólios',
+    'Páginas de serviços',
+    'Integração com WhatsApp',
+    'Formulários de contato',
+    'SEO básico',
+    'Domínio e hospedagem',
+    'Manutenção e suporte',
   ],
-  notes: [
-    'Todos os projetos incluem até 2 rodadas de ajustes. Alterações que mudem significativamente a estrutura da página ou adicionem novas funcionalidades podem ser orçadas separadamente.',
-    'Prazo estimado: até 7 dias úteis após o recebimento de todas as informações e materiais necessários.',
-  ],
+  cta: { label: 'Solicitar orçamento' },
 }
 
 export const footer = {
@@ -204,7 +154,7 @@ export const footer = {
     { label: 'Projetos', href: '#projetos' },
     { label: 'Como funciona', href: '#processo' },
     { label: 'Diferencial', href: '#diferencial' },
-    { label: 'Planos', href: '#planos' },
+    { label: 'Orçamento', href: '#orcamento' },
     { label: 'Contato', href: '#contato' },
   ],
   legal: `© ${new Date().getFullYear()} AliCria. Todos os direitos reservados.`,
