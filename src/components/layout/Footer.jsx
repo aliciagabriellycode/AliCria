@@ -19,7 +19,7 @@ export default function Footer() {
 
   const socials = [
     // TODO(AliCria): substituir os placeholders pelos links reais das redes
-    { icon: InstagramIcon, label: 'Instagram', href: 'https://instagram.com/alicria' },
+    { icon: InstagramIcon, label: 'Instagram', href: 'https://instagram.com/alicria.br' },
     { icon: MessageCircle, label: 'WhatsApp', href: whatsappHref },
     { icon: Mail, label: 'E-mail', href: `mailto:${brand.email}` },
   ]
