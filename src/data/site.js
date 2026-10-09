@@ -7,11 +7,11 @@ export const brand = {
   tagline: 'Web • Design • Digital',
   whatsapp: {
     // TODO(AliCria): substituir pelo número real em formato internacional
-    number: '5511999999999',
-    label: '(11) 99999-9999',
+    number: '5511939523356',
+    label: '(11) 93952-3356',
   },
-  email: 'contato@alicria.com.br', // TODO(AliCria): confirmar e-mail definitivo
-  instagram: '@alicria', // TODO(AliCria): confirmar usuário definitivo
+  email: 'agab.santos@icloud.com', // TODO(AliCria): confirmar e-mail definitivo
+  instagram: '@alicria.br', // TODO(AliCria): confirmar usuário definitivo
 }
 
 export const nav = {
