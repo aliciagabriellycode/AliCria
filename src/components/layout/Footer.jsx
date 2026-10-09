@@ -70,10 +70,6 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/15 pt-6 text-xs text-lilac/80 sm:flex-row sm:items-center sm:justify-between">
           <p>{footer.legal}</p>
-          <p>
-            {/* TODO(AliCria): links de redes sociais e e-mail ainda são placeholders */}
-            Links de contato temporários — a atualizar.
-          </p>
         </div>
       </div>
     </footer>
