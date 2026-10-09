@@ -9,23 +9,24 @@ export default {
     extend: {
       colors: {
         ink: {
-          DEFAULT: '#211F26',
-          soft: '#4B4855',
-          muted: '#726E7A',
+          DEFAULT: '#1B1427',
+          soft: '#4A4258',
+          muted: '#6B6379',
         },
         paper: {
-          DEFAULT: '#FBFAF8',
+          DEFAULT: '#FAF8F5',
           white: '#FFFFFF',
         },
         line: {
           DEFAULT: '#E7E3ED',
           soft: '#EFECF4',
         },
-        surface: '#F5F2FA',
+        surface: '#F2ECFF',
+        lilac: '#D8C9FB',
         brand: {
-          DEFAULT: '#4B2A7A',
-          deep: '#331D57',
-          bright: '#6B3FA0',
+          DEFAULT: '#5A2BC9',
+          deep: '#26104F',
+          bright: '#8E63F2',
         },
       },
       fontFamily: {
@@ -41,7 +42,7 @@ export default {
       },
       boxShadow: {
         card: '0 1px 2px rgba(33, 31, 38, 0.04)',
-        lift: '0 20px 45px -20px rgba(51, 29, 87, 0.35)',
+        lift: '0 28px 50px -28px rgba(90, 43, 201, 0.55)',
       },
       transitionTimingFunction: {
         soft: 'cubic-bezier(0.16, 1, 0.3, 1)',

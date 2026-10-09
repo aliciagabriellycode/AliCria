@@ -31,9 +31,13 @@
   }
 
   :focus-visible {
-    outline: 2px solid #4B2A7A;
+    outline: 2px solid #5A2BC9;
     outline-offset: 3px;
     border-radius: 2px;
+  }
+
+  [data-theme='dark'] :focus-visible {
+    outline-color: #D8C9FB;
   }
 }
 
@@ -62,4 +66,9 @@
     transform: none;
     transition: none;
   }
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #5A2BC9;
 }

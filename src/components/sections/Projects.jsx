@@ -7,12 +7,18 @@ import BeautyPreview from '../previews/BeautyPreview'
 const demoPreviews = { auto: AutoPreview, beauty: BeautyPreview }
 
 export default function Projects() {
+  const [first, ...rest] = projects.headline.split('. ')
+  const headA = `${first}.`
+  const headB = rest.join('. ')
   return (
     <section id="projetos" className="py-20 sm:py-28">
       <div className="container-page">
         <Reveal className="max-w-xl">
-          <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">{projects.headline}</h2>
-          <p className="mt-5 text-base leading-relaxed text-ink-muted">{projects.body}</p>
+          <h2 className="text-3xl leading-tight sm:text-5xl">
+            <span className="block font-light text-brand">{headA}</span>
+            <span className="block font-extrabold text-ink">{headB}</span>
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-ink-soft">{projects.body}</p>
         </Reveal>
 
         {/* Case real — em destaque, com composição de fotos reais e mais espaço
@@ -30,13 +36,13 @@ export default function Projects() {
                 <Preview />
 
                 <div className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
-                  <span className="rounded-full border border-line bg-white px-3 py-1 text-[11px] font-semibold text-ink-muted">
+                  <span className="rounded-full border-2 border-brand/30 px-3 py-1 text-[11px] font-bold text-brand">
                     {project.badge}
                   </span>
                   <span className="text-xs text-ink-muted">{project.category}</span>
                 </div>
 
-                <h3 className="mt-3 text-lg font-bold text-ink">{project.name}</h3>
+                <h3 className="mt-3 text-xl font-extrabold text-ink">{project.name}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">{project.description}</p>
 
                 {project.badgeNote && (

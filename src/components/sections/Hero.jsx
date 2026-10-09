@@ -1,32 +1,29 @@
 import { hero } from '../../data/site'
-import { whatsappLink } from '../../lib/whatsapp'
 import Button from '../ui/Button'
 import Reveal from '../ui/Reveal'
-import BusinessPagePreview from '../previews/BusinessPagePreview'
+import Shape from '../ui/Shapes'
+import mainPhoto from '../../assets/jr-porcelanato/jr-bancada-principal.jpg'
+import secondPhoto from '../../assets/jr-porcelanato/jr-pia-escultural-branca.jpg'
 
 export default function Hero() {
-  const ctaPrimaryHref = whatsappLink(
-    'Olá! Tenho interesse em conhecer a AliCria e quero apresentar melhor o meu negócio.'
-  )
-
   return (
-    <section id="top" className="relative overflow-hidden pt-14 pb-20 sm:pt-20 sm:pb-24 lg:pt-24">
-      <div className="container-page grid grid-cols-1 items-center gap-16 lg:grid-cols-[1fr_0.92fr] lg:gap-10">
-        <div className="max-w-xl">
+    <section id="top" className="relative overflow-hidden pt-10 pb-20 sm:pt-16 sm:pb-24 lg:pt-20">
+      <div className="container-page grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+        <div className="max-w-2xl">
           <Reveal>
-            <h1 className="text-4xl font-extrabold text-ink sm:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">
-              <span className="block text-ink-soft font-semibold">{hero.headlineLines[0]}</span>
-              <span className="mt-1 block">{hero.headlineLines[1]}</span>
+            <h1 className="text-[clamp(2.2rem,5vw,3.9rem)] leading-[1.04] tracking-tight">
+              <span className="block font-light text-brand">{hero.headlineLines[0]}</span>
+              <span className="mt-2 block font-extrabold text-ink">{hero.headlineLines[1]}</span>
             </h1>
           </Reveal>
 
           <Reveal delay={90}>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-muted">{hero.subheadline}</p>
+            <p className="mt-7 max-w-md text-lg leading-relaxed text-ink-soft">{hero.subheadline}</p>
           </Reveal>
 
           <Reveal delay={160}>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href={ctaPrimaryHref} target="_blank" rel="noopener noreferrer" variant="primary">
+              <Button href={hero.ctaPrimary.href} variant="primary" arrow>
                 {hero.ctaPrimary.label}
               </Button>
               <Button href={hero.ctaSecondary.href} variant="secondary">
@@ -37,12 +34,30 @@ export default function Hero() {
         </div>
 
         <Reveal delay={140} className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="relative rotate-[1.2deg]">
-            <BusinessPagePreview variant="compact" />
+          <div className="relative mx-auto aspect-[5/6] w-full max-w-[460px]">
+            <Shape kind="arch" className="absolute inset-x-[8%] bottom-0 top-[6%] bg-brand" />
+            <img
+              src={mainPhoto}
+              alt="Bancada de porcelanato feita pela JR Porcelanato, cliente real da AliCria"
+              width={685}
+              height={913}
+              className="absolute inset-x-[15%] bottom-0 top-[12%] h-[88%] w-[70%] object-cover"
+              style={{ borderRadius: '999px 999px 0 0' }}
+            />
+            <img
+              src={secondPhoto}
+              alt="Pia esculpida em porcelanato branco da JR Porcelanato"
+              width={350}
+              height={464}
+              className="absolute -left-[2%] top-[56%] h-[34%] w-[34%] rounded-full border-[6px] border-paper object-cover"
+            />
+            <Shape kind="petal" className="absolute -right-[2%] top-0 h-[22%] w-[22%] bg-lilac" />
+            <Shape kind="quarterBL" className="absolute -right-[2%] bottom-[8%] h-[16%] w-[16%] bg-brand-bright" />
+            <div className="absolute bottom-[3%] right-0 rounded-2xl bg-white px-4 py-3 shadow-lift">
+              <p className="text-xs font-bold text-brand">Projeto real</p>
+              <p className="text-sm font-extrabold text-ink">JR Porcelanato</p>
+            </div>
           </div>
-          <p className="mt-4 text-center text-sm text-ink-muted lg:text-left">
-            É mais ou menos assim que a página do seu negócio pode ficar.
-          </p>
         </Reveal>
       </div>
     </section>
